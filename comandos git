@@ -1,0 +1,16 @@
+comandos git 
+
+git log --pretty=medium = shows the date of commit and committer
+git log --since=1.week = shows commit up to a week ago 
+git difftool --prompt = show in prompt before to go to diff tool
+git push --set-upstream origin [Desenvolvimento] = used to create and sync a branch that no exist in remote repository
+git stash clear = clear all stash
+git ls-files -ci --exclude-standard = lista todos os arquivos que deveriam ser ignorados pelo git por causa da configuração do git ignore
+git ls-files -ci --exclude-standard -z | xargs -0 git rm --cached = remove todos os arquivos que eram para ser ignorados (sem deletar do disco)
+
+
+quando eu preciso apagar arquivos que não estão no stage 
+1- git .add
+2- git stash ou reset hard
+
+
