@@ -1,0 +1,43 @@
+[user]
+	email = ederson@email.com.br
+	name = Ederson
+
+[alias]
+  co = checkout
+  lg = log --all --graph --decorate --oneline --abbrev-commit
+  cm = commit
+  ac = !git add -A && git commit
+  st = status -sb
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+  lgo = log --oneline
+  lgn = log --oneline --name-only
+
+
+    
+[mergetool]
+    prompt = false
+    keepBackup = false
+    keepTemporaries = false
+
+[merge]
+	tool = winmerge
+
+[mergetool "winmerge"]
+    name = WinMerge
+    trustExitCode = true
+    cmd = "c://Users/Desktop/WinMergePortable/App/WinMerge/WinMergeU.exe" -u -e -dl \"Local\" -dr \"Remote\" $LOCAL $REMOTE $MERGED
+  
+  
+[diff]
+    tool = winmerge
+
+[difftool "winmerge"]
+	name = WinMerge
+    trustExitCode = true
+    cmd = "c://Users/Desktop/WinMergePortable/App/WinMerge/WinMergeU.exe" -wr -e -u -dl  \"mine\" -dr \"base\" \"$REMOTE\" \"$LOCAL\"
+	
+
+[core]
+	autocrlf = true
